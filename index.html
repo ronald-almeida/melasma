@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Protocolo Melasma | Checkout</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;font-family:"Open Sans",sans-serif,Arial;color:#111;background:#fff}
+    body{display:flex;justify-content:center}
+    .page{width:min(100%,600px);padding:3px 6px 24px}
+    .timer{height:70px;background:#eb5757;color:#fff;display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:16px}
+    .timer-time{font-size:36px;font-weight:400;line-height:1}.timer-label{font-size:14px;font-weight:600}
+    .timer-clock{width:29px;height:29px;border-radius:50%;background:#fff;position:relative;display:inline-block}.timer-clock:before{content:"";position:absolute;width:3px;height:8px;background:#eb5757;left:13px;top:6px;border-radius:2px}.timer-clock:after{content:"";position:absolute;width:7px;height:3px;background:#eb5757;left:13px;top:13px;transform:rotate(45deg);transform-origin:left center;border-radius:2px}
+    .banner{width:100%;aspect-ratio:584/214;background:#ececec url('./product-banner.png') center/cover no-repeat;margin-bottom:8px}
+    .country-row{height:34px;border-top:1px solid #dfe3e8;border-bottom:1px solid #dfe3e8;display:flex;justify-content:flex-end;align-items:center;font-size:13px;padding:0 6px}.country-row select{border:0;background:transparent;font:inherit;outline:none}
+    .flag{width:21px;height:15px;background:#169b62;position:relative;display:inline-block;margin-right:7px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08)}.flag:before{content:"";position:absolute;left:4px;top:2px;width:13px;height:11px;background:#ffdf00;transform:rotate(45deg) scale(.72)}.flag:after{content:"";position:absolute;left:7px;top:4px;width:7px;height:7px;background:#002776;border-radius:50%}
+    .form{padding:0 6px}.section-title{font-size:14px;font-weight:700;color:#344054;margin:22px 0 0}.field{width:100%;height:48px;border:1px solid #cfd3d8;border-radius:5px;margin:12px 0 0;padding:0 14px;font:15px "Open Sans",sans-serif,Arial;color:#354052;outline:none}.field:focus{border-color:#3d9bff;box-shadow:0 0 0 1px #3d9bff}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid-3{display:grid;grid-template-columns:1fr 1fr 120px;gap:10px}
+    .phone{height:48px;border:1px solid #cfd3d8;border-radius:5px;margin-top:12px;display:flex;align-items:center;padding:0 14px;gap:8px;color:#586174}.phone-prefix{display:flex;align-items:center;gap:5px;white-space:nowrap;padding-right:8px;border-right:1px solid #e4e7eb}.phone input{flex:1;border:0;outline:none;font:15px "Open Sans",sans-serif,Arial;min-width:0}
+    .payment-choice{margin:36px 2px 16px;width:200px;height:48px;border:1px solid #168cff;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#3b9bea;position:relative;box-shadow:0 2px 5px rgba(0,0,0,.08)}.payment-choice:after{content:"✓";position:absolute;right:-7px;top:-7px;background:#42b883;color:#fff;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}.pix-svg{width:18px;height:18px;margin-right:7px;color:#3b9bea}
+    .info{background:#f1f2f4;border:1px solid #e1e4e8;border-radius:4px;padding:18px 16px 20px;margin:0 2px 24px;font-size:16px;line-height:1.48}.info strong.title{display:block;font-size:17px;margin-bottom:14px}.info ul{margin:0;padding-left:24px}
+    .pay{width:calc(100% - 4px);height:59px;margin:0 2px;border:0;border-radius:5px;background:#27b867;color:#fff;font:700 17px "Open Sans",sans-serif,Arial;cursor:pointer}.pay:hover{background:#22a75d}.pay:disabled{opacity:.65;cursor:wait}
+    .legal{text-align:center;color:#91a1b6;font-size:10px;line-height:1.65;padding:10px 4px 0}.feedback{min-height:20px;margin:10px 2px 0;text-align:center;font-size:13px;color:#b42318}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.58);display:none;align-items:center;justify-content:center;padding:18px;z-index:20}.modal.open{display:flex}.modal-card{width:min(100%,430px);background:#fff;border-radius:12px;padding:22px;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.25)}.close{position:absolute;right:12px;top:10px;border:0;background:none;font-size:28px;cursor:pointer;color:#6b7280}.modal-card h2{font-size:21px;margin:0 30px 8px 0}.modal-card p{font-size:13px;color:#667085;margin:0 0 16px}.qr{display:flex;justify-content:center;margin:10px 0 16px}.qr img{width:240px;height:240px;max-width:100%}.pix-code{width:100%;height:90px;resize:none;border:1px solid #d0d5dd;border-radius:6px;padding:10px;font-size:12px}.copy{width:100%;height:45px;border:0;border-radius:6px;background:#27b867;color:#fff;font-weight:700;font-size:15px;margin-top:10px;cursor:pointer}
+    @media(max-width:480px){.timer{gap:12px}.timer-time{font-size:32px}.timer-label{font-size:13px}.page{padding-left:4px;padding-right:4px}.info{font-size:15px}.grid-2,.grid-3{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="timer" aria-label="Oferta por tempo limitado"><span id="timer" class="timer-time">12:36</span><span class="timer-clock" aria-hidden="true"></span><span class="timer-label">Oferta por tempo limitado</span></section>
+    <div class="banner" role="img" aria-label="Protocolo Melasma"></div>
+    <div class="country-row"><span class="flag" aria-hidden="true"></span><select aria-label="País"><option>Alterar país</option><option selected>Brasil</option></select></div>
+
+    <form id="checkoutForm" class="form" novalidate>
+      <input id="name" class="field" type="text" autocomplete="name" placeholder="Nome">
+      <input id="email" class="field" type="email" autocomplete="email" placeholder="E-mail">
+      <input id="emailConfirm" class="field" type="email" autocomplete="email" placeholder="Confirmar e-mail">
+      <input id="taxId" class="field" type="text" inputmode="numeric" placeholder="CPF/CNPJ">
+      <div class="phone"><span class="phone-prefix"><span class="flag" aria-hidden="true"></span>+55 ▾</span><input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Telefone"></div>
+
+      <div class="section-title">Endereço</div>
+      <div class="grid-2"><input id="zipCode" class="field" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="CEP"><input id="address" class="field" type="text" autocomplete="street-address" placeholder="Endereço"></div>
+      <div class="grid-2"><input id="number" class="field" type="text" placeholder="Número"><input id="complement" class="field" type="text" placeholder="Complemento (opcional)"></div>
+      <input id="neighborhood" class="field" type="text" placeholder="Bairro">
+      <div class="grid-2"><input id="city" class="field" type="text" autocomplete="address-level2" placeholder="Cidade"><input id="state" class="field" type="text" maxlength="2" autocomplete="address-level1" placeholder="UF"></div>
+
+      <div class="payment-choice"><svg width="166" height="166" viewBox="0 0 166 166" xmlns="http://www.w3.org/2000/svg" class="pix-svg"><path d="M128.886 126.429C122.402 126.429 116.304 123.904 111.719 119.321L86.9305 94.5328C85.1908 92.7877 82.1569 92.7931 80.4173 94.5328L55.5383 119.412C50.9529 123.994 44.8548 126.519 38.3704 126.519H33.4857L64.8802 157.914C74.6853 167.718 90.5823 167.718 100.387 157.914L131.873 126.429H128.886Z" fill="currentColor"></path><path d="M38.3705 38.7476C44.8549 38.7476 50.953 41.2731 55.5376 45.8562L80.4166 70.739C82.2083 72.5308 85.1342 72.5385 86.9306 70.7367L111.719 45.9464C116.304 41.3633 122.402 38.8385 128.887 38.8385H131.872L100.388 7.35388C90.5824 -2.45126 74.6854 -2.45126 64.8803 7.35388L33.4866 38.7476H38.3705Z" fill="currentColor"></path><path d="M157.914 64.8806L138.888 45.8541C138.469 46.022 138.015 46.1269 137.537 46.1269H128.887C124.414 46.1269 120.036 47.9404 116.876 51.1026L92.0874 75.8914C89.7686 78.2109 86.7207 79.3722 83.6752 79.3722C80.6273 79.3722 77.5818 78.2109 75.2622 75.8937L50.3809 51.0124C47.2204 47.8503 42.8433 46.0368 38.3705 46.0368H27.7337C27.2805 46.0368 26.8561 45.9295 26.4558 45.7787L7.35385 64.8806C-2.45128 74.685 -2.45128 90.582 7.35385 100.388L26.455 119.489C26.8553 119.338 27.2805 119.231 27.7337 119.231H38.3705C42.8433 119.231 47.2204 117.417 50.3809 114.255L75.2599 89.3763C79.7567 84.8834 87.5952 84.8811 92.0874 89.3787L116.876 114.164C120.036 117.327 124.414 119.141 128.887 119.141H137.537C138.016 119.141 138.469 119.245 138.888 119.413L157.914 100.388C167.719 90.582 167.719 74.685 157.914 64.8806Z" fill="currentColor"></path></svg>Pix</div>
+
+      <section class="info"><strong class="title">Informações sobre o pagamento via pix:</strong><ul><li>Valor à vista: <strong>R$ 498,90.</strong></li><li>Pagamento único, sem mensalidades.</li><li>É simples: use o aplicativo do seu banco para pagar via PIX.</li><li>Pagamento processado de forma segura.</li></ul></section>
+      <button id="payButton" class="pay" type="button">Pagar agora</button>
+      <div class="legal">Ao clicar em “Pagar agora”, você confirma os dados pessoais e de endereço informados e solicita a geração da cobrança Pix no valor de R$ 498,90.</div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <div id="pixModal" class="modal" aria-hidden="true"><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="pixTitle"><button id="closeModal" class="close" type="button" aria-label="Fechar">×</button><h2 id="pixTitle">Pagamento via Pix</h2><p>Escaneie o QR Code abaixo ou copie o código Pix.</p><div id="qr" class="qr"></div><textarea id="pixCode" class="pix-code" readonly></textarea><button id="copyPix" class="copy" type="button">Copiar código Pix</button></div></div>
+
+  <script>
+    const digits=v=>String(v||'').replace(/\D/g,'');
+    const form=document.getElementById('checkoutForm');const payButton=document.getElementById('payButton');const feedback=document.getElementById('feedback');const modal=document.getElementById('pixModal');const qr=document.getElementById('qr');const pixCode=document.getElementById('pixCode');
+    let remaining=12*60+36;setInterval(()=>{if(remaining>0)remaining--;const m=String(Math.floor(remaining/60)).padStart(2,'0');const s=String(remaining%60).padStart(2,'0');document.getElementById('timer').textContent=m+':'+s},1000);
+    function customer(){const name=document.getElementById('name').value.trim();const email=document.getElementById('email').value.trim();const emailConfirm=document.getElementById('emailConfirm').value.trim();const taxId=digits(document.getElementById('taxId').value);const phone=digits(document.getElementById('phone').value);const zipCode=digits(document.getElementById('zipCode').value);const address=document.getElementById('address').value.trim();const number=document.getElementById('number').value.trim();const complement=document.getElementById('complement').value.trim();const neighborhood=document.getElementById('neighborhood').value.trim();const city=document.getElementById('city').value.trim();const state=document.getElementById('state').value.trim().toUpperCase();if(!name||!email||!emailConfirm||!taxId||!phone||!zipCode||!address||!number||!neighborhood||!city||!state)throw new Error('Preencha todos os campos obrigatórios para continuar.');if(email.toLowerCase()!==emailConfirm.toLowerCase())throw new Error('Os e-mails informados não coincidem.');if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))throw new Error('Informe um e-mail válido.');if(taxId.length!==11&&taxId.length!==14)throw new Error('Informe um CPF ou CNPJ válido.');if(phone.length<10||phone.length>11)throw new Error('Informe um telefone válido.');if(zipCode.length!==8)throw new Error('Informe um CEP válido.');if(state.length!==2)throw new Error('Informe a UF com 2 letras.');return{name,email,taxId,phone,address:{zipCode,address,number,complement,neighborhood,city,state}}}
+    payButton.addEventListener('click',async()=>{const original=payButton.textContent;try{feedback.textContent='';payButton.disabled=true;payButton.textContent='Gerando Pix...';const response=await fetch('/api/create-pix',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(customer())});const data=await response.json().catch(()=>({}));if(!response.ok)throw new Error(data.error||'Não foi possível gerar o Pix.');if(!data.copypaste||!data.qrCode)throw new Error('O Pix foi criado, mas os dados de pagamento não foram retornados corretamente.');pixCode.value=data.copypaste;qr.innerHTML='<img src="'+data.qrCode+'" alt="QR Code Pix">';modal.classList.add('open');modal.setAttribute('aria-hidden','false')}catch(err){feedback.textContent=err.message||'Erro ao gerar o Pix.'}finally{payButton.disabled=false;payButton.textContent=original}});
+    document.getElementById('closeModal').addEventListener('click',()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true')});modal.addEventListener('click',e=>{if(e.target===modal){modal.classList.remove('open');modal.setAttribute('aria-hidden','true')}});document.getElementById('copyPix').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(pixCode.value)}catch{pixCode.select();document.execCommand('copy')}const b=document.getElementById('copyPix');b.textContent='Código Pix copiado';setTimeout(()=>b.textContent='Copiar código Pix',1800)});form.addEventListener('submit',e=>e.preventDefault());
+  </script>
+</body>
+</html>
