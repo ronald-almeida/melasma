@@ -1,7 +1,7 @@
 import QRCode from 'qrcode';
 
 const PRODUCT_NAME = 'Protocolo Melasma';
-const PRODUCT_AMOUNT = 49890;
+const PRODUCT_AMOUNT = 49790;
 const API_URL = 'https://api.gatewaypayshark.com.br/v1/payment';
 
 const trim = (value) => typeof value === 'string' ? value.trim() : '';
